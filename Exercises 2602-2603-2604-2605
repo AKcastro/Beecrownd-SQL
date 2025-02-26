@@ -1,0 +1,20 @@
+2602 - Select Básico
+select name
+from customers
+where state = 'RS';
+
+2603 - Endereço dos Clientes
+select name, street
+from customers 
+where city = 'Porto Alegre';
+
+2604 - Menores que 10 ou Maiores que 100
+select id, name
+from products
+where price <10 or price >100;
+
+2605 - Representantes Executivos
+select products.name, providers.name
+from products
+join providers on products.id_providers = providers.id
+where products.id_categories = 6;
