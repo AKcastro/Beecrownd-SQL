@@ -1,0 +1,30 @@
+2606 - Categorias
+select products.id, products.name 
+from products
+join categories on products.id_categories = categories.id
+where categories.name like 'super%';
+
+2607 - Cidades em Ordem Alfabética
+select distinct city
+from providers
+order by city asc;
+
+2608 - Maior e Menor preço
+select max(price), min(price)
+from products;
+
+2609 - Produtos por Categorias
+select categories.name, sum(products.amount)
+from products
+join categories on products.id_categories  = categories.id
+group by categories.name;
+
+2610 - Valor médio dos produtos
+select round(avg(price),2)
+from products;
+
+2611 - Filmes de Ação
+select movies.id, movies.name
+rom movies
+join genres on movies.id_genres = genres.id
+where genres.description = 'Action';
