@@ -1,0 +1,9 @@
+2610 - Valor médio dos produtos
+select round(avg(price),2)
+from products;
+
+2611 - Filmes de Ação
+select movies.id, movies.name
+rom movies
+join genres on movies.id_genres = genres.id
+where genres.description = 'Action';
